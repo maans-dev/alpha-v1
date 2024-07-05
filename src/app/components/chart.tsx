@@ -6,11 +6,11 @@ import ReactApexChart from 'react-apexcharts';
 import { formatStockData } from '../utils/utils';
 import { candleStickOptions } from '../utils/constants'
 
-interface LiveChartProps {
+interface ChartProps {
     symbol: string;
 }
 
-export const LiveChart: FunctionComponent<LiveChartProps> = ({ symbol }) => {
+export const Chart: FunctionComponent<ChartProps> = ({ symbol }) => {
     const [stockData, setStockData] = useState(null);
     const [error, setError] = useState(null);
 

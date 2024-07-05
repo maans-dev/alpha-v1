@@ -1,7 +1,7 @@
 'use client'
 
 import { SetStateAction, useState } from "react";
-import {LiveChart} from "./components/chart"
+import { Chart } from "./components/chart"
 
 export default function Home() {
   const [symbol, setSymbol] = useState('IBM');
@@ -22,7 +22,7 @@ export default function Home() {
         className="border border-gray-300 px-4 py-2 rounded-md mb-4 text-black"
     />
 
-    <LiveChart symbol={symbol} />
+     <Chart symbol={symbol} />
     </div>
   );
 }
