@@ -1,6 +1,6 @@
+import { ApexOptions } from 'apexcharts';
 
-
-export const candleStickOptions = {
+export const candleStickOptions: ApexOptions = {
     chart: {
         type: "candlestick",
     },

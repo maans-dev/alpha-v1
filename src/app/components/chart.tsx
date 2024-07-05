@@ -1,12 +1,16 @@
 'use client'
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { FunctionComponent, useEffect, useMemo, useState } from 'react';
 import { fetchStockData } from '../services/stock-service';
 import ReactApexChart from 'react-apexcharts';
 import { formatStockData } from '../utils/utils';
 import { candleStickOptions } from '../utils/constants'
 
-export const LiveChart = ({ symbol }) => {
+interface LiveChartProps {
+    symbol: string;
+}
+
+export const LiveChart: FunctionComponent<LiveChartProps> = ({ symbol }) => {
     const [stockData, setStockData] = useState(null);
     const [error, setError] = useState(null);
 
